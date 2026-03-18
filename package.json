@@ -1,0 +1,13 @@
+{
+  "name": "ai-cost-control-copilot",
+  "version": "0.1.0",
+  "description": "Dashboard/operator copilot for multi-provider AI cost control",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": ["ai", "cost-control", "dashboard", "copilot"],
+  "license": "MIT"
+}
