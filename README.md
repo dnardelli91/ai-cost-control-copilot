@@ -1,51 +1,41 @@
 # AI Cost Control Copilot
 
-Dashboard/operator copilot for multi-provider AI cost control.
+MVP per il monitoraggio e controllo dei costi LLM multi-provider.
 
-## Features (MVP)
+## Features
 
-- **Ingest**: Upload/ingest usage logs (CSV/JSON) or use mock data
-- **Overview**: Cost breakdown by provider, model, and project
-- **Alerts**: Anomaly and overspend detection
-- **Forecast**: Simple 30-day cost projection
-- **Recommendations**: Model routing suggestions
+- 📊 **Dashboard** - Visualizzazione costi per provider
+- 💰 **Budget Guardrails** - Soglie di alert (80%) e critical (95%)
+- 🔔 **Alerting** - Notifiche per superamento budget
+- 📈 **Forecast** - Proiezione costi mensile
+
+## Stack
+
+- Node.js + Express
+- Vanilla JS frontend
+- REST API
 
 ## Quick Start
 
 ```bash
+cd ai-cost-control-copilot
 npm install
 npm start
 ```
 
-## Project Structure
+Apri http://localhost:3000
 
-```
-src/
-  index.js          - Entry point
-  ingest.js         - Log ingestion (mock or file)
-  analytics.js      - Cost overview
-  alerts.js         - Anomaly/overspend detection
-  forecast.js       - Cost forecasting
-  recommendations.js - Model routing suggestions
-data/               - Sample data
-```
+## API Endpoints
 
-## Usage
+- `GET /api/costs/dashboard` - Riepilogo costi
+- `GET /api/costs/budget` - Stato budget
+- `GET /api/costs/alerts` - Alert attivi
+- `GET /api/costs/forecast` - Previsioni
 
-Run with mock data:
-```bash
-npm start
-```
+## Roadmap
 
-Ingest from file:
-```bash
-node src/index.js path/to/logs.csv
-```
-
-## Tech Stack
-
-- Node.js (pure - no frameworks for MVP speed)
-
----
-
-*MVP built for innovation cycle - v0.1.0*
+- [ ] Database (PostgreSQL/MongoDB)
+- [ ] Integrazione API provider reali
+- [ ] Grafico storico
+- [ ] Notifiche email/Slack
+- [ ] Autenticazione
